@@ -541,6 +541,16 @@ function resolveAction(action) {
   };
 }
 
+function isSafePreviewAction(action) {
+  return action.url.startsWith("http");
+}
+
+function getVisibleActions(actions = []) {
+  return actions
+    .map((action) => resolveAction(action))
+    .filter((action) => isSafePreviewAction(action));
+}
+
 function setNavState(open) {
   navLinks.classList.toggle("is-open", open);
   navToggle.setAttribute("aria-expanded", String(open));
@@ -569,8 +579,7 @@ function renderCards() {
         <ul class="project-highlights">${project.highlights.slice(0, 2).map((item) => `<li>${item}</li>`).join("")}</ul>
         <div class="tag-row">${tags(project.tools)}</div>
         <div class="project-actions">
-          ${project.actions.slice(0, 3).map((rawAction) => {
-            const action = resolveAction(rawAction);
+          ${getVisibleActions(project.actions).slice(0, 3).map((action) => {
             const external = action.url.startsWith("http");
             return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
           }).join("")}
@@ -601,7 +610,7 @@ function renderCards() {
         <span class="repo-icon" aria-hidden="true">${item.icon}</span>
         <div class="repo-head-copy">
           <span class="repo-kicker">${item.kicker}</span>
-          <span class="repo-support">${item.actions.length} supporting link${item.actions.length > 1 ? "s" : ""}</span>
+          <span class="repo-support">${getVisibleActions(item.actions).length} supporting link${getVisibleActions(item.actions).length !== 1 ? "s" : ""}</span>
         </div>
       </div>
       <div class="repo-card-copy">
@@ -610,8 +619,7 @@ function renderCards() {
       </div>
       <div class="tag-row">${tags(item.tags)}</div>
       <div class="repo-card-actions">
-        ${item.actions.map((rawAction) => {
-          const action = resolveAction(rawAction);
+        ${getVisibleActions(item.actions).map((action) => {
           const external = action.url.startsWith("http");
           return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
         }).join("")}
@@ -631,8 +639,7 @@ function renderModal() {
   modalDescription.textContent = activeItem.summary;
   modalHighlights.innerHTML = (activeItem.highlights || []).map((item) => `<li>${item}</li>`).join("");
   modalTags.innerHTML = tags(activeItem.tools || activeItem.tags || []);
-  modalActions.innerHTML = activeItem.actions.map((rawAction) => {
-    const action = resolveAction(rawAction);
+  modalActions.innerHTML = getVisibleActions(activeItem.actions).map((action) => {
     const external = action.url.startsWith("http");
     return `<a href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
   }).join("");
