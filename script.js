@@ -541,14 +541,8 @@ function resolveAction(action) {
   };
 }
 
-function isSafePreviewAction(action) {
-  return action.url.startsWith("http");
-}
-
 function getVisibleActions(actions = []) {
-  return actions
-    .map((action) => resolveAction(action))
-    .filter((action) => isSafePreviewAction(action));
+  return actions.map((action) => resolveAction(action));
 }
 
 function setNavState(open) {
