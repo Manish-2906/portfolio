@@ -18,7 +18,13 @@ const projects = [
     slides: ["assets/projects/ecommerce-1.png", "assets/projects/ecommerce-2.png", "assets/projects/ecommerce-3.png"],
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/E-commerce-Sales-Dashboard-in-Power-BI" },
-      { label: "Open PBIX File", url: "assets/docs/Ecommerce_Sales_Dashboard.pbix", download: true },
+      {
+        label: "Open PBIX File",
+        url: "assets/docs/Ecommerce_Sales_Dashboard.pbix",
+        download: true,
+        mobileLabel: "Open Dashboard Report",
+        mobileUrl: "assets/docs/Ecommerce_Sales_Dashboard_Report.pdf"
+      },
       { label: "Open Dashboard Report", url: "assets/docs/Ecommerce_Sales_Dashboard_Report.pdf" },
       { label: "Open Problem Statement", url: "assets/docs/Project_Ecommerce_Sales.pdf" },
       { label: "Open Instructions", url: "assets/docs/Project_Ecommerce_Sales_Instructions.pdf" }
@@ -45,7 +51,13 @@ const projects = [
       { label: "View GitHub", url: "https://github.com/Manish-2906/Amazon-Global-Sales-Analysis" },
       { label: "Open EDA PDF", url: "assets/docs/Amazon_Global_Sales_EDA_Report.pdf" },
       { label: "Open Data Ingestion (ETL)", url: "assets/docs/Amazon_Global_Sales_Data_Ingestion_ETL.pdf" },
-      { label: "Open PBIX File", url: "assets/docs/Amazon_Global_Sales_Dashboard.pbix", download: true }
+      {
+        label: "Open PBIX File",
+        url: "assets/docs/Amazon_Global_Sales_Dashboard.pbix",
+        download: true,
+        mobileLabel: "Open EDA PDF",
+        mobileUrl: "assets/docs/Amazon_Global_Sales_EDA_Report.pdf"
+      }
     ]
   },
   {
@@ -263,7 +275,12 @@ const projects = [
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/Music-Store-Data-Analysis-in-SQL" },
       { label: "Open SQL Case Study", url: "assets/docs/Project_Music_Store_SQL.pdf" },
-      { label: "Open Presentation Deck", url: "assets/docs/Music_Store_Analysis_Deck.pptx" }
+      {
+        label: "Open Presentation Deck",
+        url: "assets/docs/Music_Store_Analysis_Deck.pptx",
+        mobileLabel: "View GitHub",
+        mobileUrl: "https://github.com/Manish-2906/Music-Store-Data-Analysis-SQL-Project"
+      }
     ]
   },
   {
@@ -502,12 +519,27 @@ const modalCloseButton = qs(".modal-close");
 const heroVideoFrame = qs("#heroVideoFrame");
 const heroVideoFallback = qs("#heroVideoFallback");
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const prefersCoarsePointer = window.matchMedia("(pointer: coarse)");
 let activeItem = null;
 let activeSlide = 0;
 let lastActiveTrigger = null;
 
 const tags = (list) => list.map((tag) => `<span>${tag}</span>`).join("");
 const itemById = (id) => [...projects, ...credentials, ...repoArchive].find((item) => item.id === id) || null;
+
+function isMobileLike() {
+  return prefersCoarsePointer.matches || window.innerWidth <= 820;
+}
+
+function resolveAction(action) {
+  const useMobileFallback = isMobileLike() && action.mobileUrl;
+  return {
+    ...action,
+    label: useMobileFallback ? (action.mobileLabel || action.label) : action.label,
+    url: useMobileFallback ? action.mobileUrl : action.url,
+    download: useMobileFallback ? false : action.download
+  };
+}
 
 function setNavState(open) {
   navLinks.classList.toggle("is-open", open);
@@ -537,7 +569,8 @@ function renderCards() {
         <ul class="project-highlights">${project.highlights.slice(0, 2).map((item) => `<li>${item}</li>`).join("")}</ul>
         <div class="tag-row">${tags(project.tools)}</div>
         <div class="project-actions">
-          ${project.actions.slice(0, 3).map((action) => {
+          ${project.actions.slice(0, 3).map((rawAction) => {
+            const action = resolveAction(rawAction);
             const external = action.url.startsWith("http");
             return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
           }).join("")}
@@ -577,7 +610,8 @@ function renderCards() {
       </div>
       <div class="tag-row">${tags(item.tags)}</div>
       <div class="repo-card-actions">
-        ${item.actions.map((action) => {
+        ${item.actions.map((rawAction) => {
+          const action = resolveAction(rawAction);
           const external = action.url.startsWith("http");
           return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
         }).join("")}
@@ -597,7 +631,8 @@ function renderModal() {
   modalDescription.textContent = activeItem.summary;
   modalHighlights.innerHTML = (activeItem.highlights || []).map((item) => `<li>${item}</li>`).join("");
   modalTags.innerHTML = tags(activeItem.tools || activeItem.tags || []);
-  modalActions.innerHTML = activeItem.actions.map((action, index) => {
+  modalActions.innerHTML = activeItem.actions.map((rawAction) => {
+    const action = resolveAction(rawAction);
     const external = action.url.startsWith("http");
     return `<a href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
   }).join("");
