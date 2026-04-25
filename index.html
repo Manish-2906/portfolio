@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Manish Divekar | Data Analyst Portfolio</title>
+  <title>Manish Divekar | Data Analyst & BI Portfolio</title>
   <meta
     name="description"
     content="Data analyst portfolio for Manish Divekar featuring SQL, Python, Power BI, dashboarding, business reporting, certifications, and project case studies sourced from GitHub."
@@ -36,7 +36,7 @@
           </span>
         </a>
 
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle navigation menu">
           Menu
         </button>
 
@@ -46,14 +46,14 @@
           <a href="#work">Work</a>
           <a href="#credentials">Credentials</a>
           <a href="#contact">Contact</a>
-          <a class="nav-resume" href="assets/docs/Manish_Divekar_Resume.pdf" download>Resume</a>
+          <a class="nav-resume" href="assets/docs/Manish_Divekar_DataAnalyst_Resume.pdf" download>Resume</a>
         </div>
       </nav>
 
       <div class="hero-grid container">
         <section class="hero-copy" data-animate>
           <p class="eyebrow">Data Analyst | SQL, Python, Power BI, Excel</p>
-          <h1>Turning raw business data into clear dashboards, useful KPIs, and recruiter-ready case studies.</h1>
+          <h1><span>Turning <em>raw data</em></span><span>into business decisions.</span></h1>
           <p class="hero-text">
             I am Manish Divekar, a data analyst focused on SQL, Python, Power BI, and business reporting.
             This portfolio highlights my internship work, certifications, and selected case studies across sales analytics,
@@ -63,7 +63,7 @@
           <div class="hero-actions">
             <a class="button button-primary" href="#work">View Case Studies</a>
             <a class="button button-linkedin" href="https://www.linkedin.com/in/manishsql29/" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
-            <a class="button button-secondary" href="assets/docs/Manish_Divekar_Resume.pdf" download>Download Resume</a>
+            <a class="button button-secondary" href="assets/docs/Manish_Divekar_DataAnalyst_Resume.pdf" download>Download Resume</a>
           </div>
 
           <div class="hero-proof">
@@ -73,11 +73,36 @@
             </div>
             <div class="proof-chip">
               <span class="proof-label">Portfolio</span>
-              <strong>8 featured case studies</strong>
+              <strong>11 featured case studies</strong>
             </div>
             <div class="proof-chip">
               <span class="proof-label">Core Stack</span>
-              <strong>SQL, Python, Power BI</strong>
+              <strong>SQL, Python, Power BI, Excel</strong>
+            </div>
+          </div>
+
+          <div class="hero-video-card" data-animate aria-label="Project explanation video">
+            <div class="hero-video-top">
+              <span>Project Walkthrough</span>
+              <strong>Unmute from player controls</strong>
+            </div>
+            <div class="hero-video-frame">
+              <iframe
+                id="heroVideoFrame"
+                data-src="https://www.youtube.com/embed/62I57MIY5rQ?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1&playsinline=1&loop=1&playlist=62I57MIY5rQ"
+                title="COVID-19 Impact Analysis project explanation video"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+              <div class="hero-video-fallback" id="heroVideoFallback" hidden>
+                <strong>Video preview works on localhost</strong>
+                <p>YouTube blocks embedded playback on `file://` preview. Open the local portfolio preview and the video will autoplay muted there.</p>
+                <div class="hero-video-actions">
+                  <a class="button button-primary" data-live-preview href="http://127.0.0.1:8000/index.html">Open Live Preview</a>
+                  <a class="button button-secondary" href="https://youtu.be/62I57MIY5rQ?si=DnuM3GdPBYpJ_HpI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -92,6 +117,9 @@
               class="portrait-image"
               src="assets/profile/manish-photo.png"
               alt="Professional portrait of Manish Divekar"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
             >
             <div class="portrait-details">
               <div>
@@ -114,7 +142,7 @@
               <span>Public GitHub repositories</span>
             </article>
             <article class="signal-card">
-              <strong class="count-up" data-counter="8">0</strong>
+              <strong class="count-up" data-counter="11">0</strong>
               <span>Featured analytics case studies</span>
             </article>
             <article class="signal-card">
@@ -326,7 +354,7 @@
         <div class="section-divider" data-animate aria-hidden="true"><span></span><i></i><span></span></div>
         <div class="section-heading" data-animate>
           <p class="eyebrow">Featured Work</p>
-          <h2>Project case studies sourced from GitHub, portfolio files, and dashboard screenshots.</h2>
+          <h2>Business-first case studies built to show impact, not just output.</h2>
           <p>
             Each card opens a focused case study with screenshots, tools, highlights, and direct links to the repository or
             supporting portfolio document where available.
@@ -364,10 +392,10 @@
 
         <div class="repo-archive" data-animate>
           <div class="archive-copy">
-            <h3>Extended project archive</h3>
+            <h3>Extended project library</h3>
             <p>
               More repositories are paired with supporting decks, reports, and project documents so recruiters can review
-              both the GitHub code and the business-facing presentation of the work.
+              the code, the problem statement, and the presentation layer of the work together.
             </p>
           </div>
           <div class="repo-showcase" id="repoArchive"></div>
@@ -402,7 +430,7 @@
               <a class="button button-primary" href="mailto:manishdivekar.analyst@gmail.com">Email Me</a>
               <a class="button button-linkedin" href="https://www.linkedin.com/in/manishsql29/" target="_blank" rel="noopener noreferrer">Open LinkedIn</a>
               <a class="button button-ghost" href="https://github.com/Manish-2906" target="_blank" rel="noopener noreferrer">View GitHub</a>
-              <a class="button button-secondary" href="assets/docs/Manish_Divekar_Resume.pdf" download>Resume PDF</a>
+              <a class="button button-secondary" href="assets/docs/Manish_Divekar_DataAnalyst_Resume.pdf" download>Resume PDF</a>
             </div>
           </div>
 
@@ -436,7 +464,7 @@
 
   <div class="modal" id="detailModal" aria-hidden="true">
     <div class="modal-backdrop" data-modal-close></div>
-    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription">
       <button class="modal-close" type="button" data-modal-close aria-label="Close dialog">Close</button>
 
       <div class="modal-media">
@@ -448,7 +476,7 @@
         </div>
       </div>
 
-      <div class="modal-content">
+      <div class="modal-content" id="modalContent">
         <p class="modal-kicker" id="modalKicker"></p>
         <h3 id="modalTitle"></h3>
         <p class="modal-description" id="modalDescription"></p>

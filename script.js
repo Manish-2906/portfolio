@@ -6,19 +6,22 @@ const projects = [
     theme: "powerbi",
     icon: "BI",
     date: "Aug 2025",
-    summary: "Power BI sales dashboard built to track revenue, profit, quantity sold, payment mix, category performance, and regional contribution in one view.",
+    summary: "Developed a Power BI command center tracking revenue, profit, order volume, payment mix, category contribution, and state-wise performance so decision-makers could spot growth pockets and weak regions faster.",
     highlights: [
-      "Built KPI cards, map views, category charts, trend analysis, slicers, and conditional formatting.",
-      "Strong example of recruiter-friendly business reporting and dashboard storytelling.",
-      "Backed by GitHub repo details and a local project PDF."
+      "Combined KPI cards, geo views, trend charts, and slicers to reduce manual sales reporting across product, payment, and regional segments.",
+      "Surfaced which categories and states were driving the strongest contribution, helping prioritize focus areas for revenue growth.",
+      "Packaged the analysis as a recruiter-ready case study with dashboard screens and supporting project documentation."
     ],
     tools: ["Power BI", "DAX", "Power Query", "Sales KPIs", "Dashboard Design"],
+    imagePosition: "center top",
     image: "assets/projects/ecommerce-1.png",
-    slides: ["assets/projects/ecommerce-1.png", "assets/projects/ecommerce-2.png"],
+    slides: ["assets/projects/ecommerce-1.png", "assets/projects/ecommerce-2.png", "assets/projects/ecommerce-3.png"],
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/E-commerce-Sales-Dashboard-in-Power-BI" },
-      { label: "Open Project PDF", url: "assets/docs/Project_Ecommerce_Sales.pdf" },
-      { label: "View Instructions", url: "assets/docs/Project_Ecommerce_Sales_Instructions.pdf" }
+      { label: "Open PBIX File", url: "assets/docs/Ecommerce_Sales_Dashboard.pbix", download: true },
+      { label: "Open Dashboard Report", url: "assets/docs/Ecommerce_Sales_Dashboard_Report.pdf" },
+      { label: "Open Problem Statement", url: "assets/docs/Project_Ecommerce_Sales.pdf" },
+      { label: "Open Instructions", url: "assets/docs/Project_Ecommerce_Sales_Instructions.pdf" }
     ]
   },
   {
@@ -28,16 +31,22 @@ const projects = [
     theme: "analytics",
     icon: "SQL",
     date: "Jun 2025",
-    summary: "End-to-end sales analytics pipeline that loads Excel data into MySQL, performs EDA in Python, and turns findings into dashboard-ready KPIs.",
+    summary: "Built an end-to-end sales analytics pipeline that transformed raw Excel data into MySQL and dashboard-ready KPIs, making profit drivers, delivery performance, and customer segment trends easier to act on.",
     highlights: [
-      "Connects data ingestion, SQL storage, EDA, and dashboarding into one workflow.",
-      "Focuses on delivery performance, profit movement, and customer segments.",
-      "Useful case study for business analytics interviews."
+      "Connected ingestion, cleaning, SQL storage, exploratory analysis, and reporting in one business-ready workflow.",
+      "Highlighted margin movement, shipping performance, and segment-level demand patterns to support sharper sales decisions.",
+      "Shows how raw operational data can be converted into executive-friendly performance tracking."
     ],
     tools: ["Python", "MySQL", "Power BI", "EDA", "Sales Analytics"],
+    imagePosition: "center top",
     image: "assets/projects/amazon-1.png",
-    slides: ["assets/projects/amazon-1.png", "assets/projects/amazon-2.png"],
-    actions: [{ label: "View GitHub", url: "https://github.com/Manish-2906/Amazon-Global-Sales-Analysis" }]
+    slides: ["assets/projects/amazon-1.png", "assets/projects/amazon-2.png", "assets/projects/amazon-3.png"],
+    actions: [
+      { label: "View GitHub", url: "https://github.com/Manish-2906/Amazon-Global-Sales-Analysis" },
+      { label: "Open EDA PDF", url: "assets/docs/Amazon_Global_Sales_EDA_Report.pdf" },
+      { label: "Open Data Ingestion (ETL)", url: "assets/docs/Amazon_Global_Sales_Data_Ingestion_ETL.pdf" },
+      { label: "Open PBIX File", url: "assets/docs/Amazon_Global_Sales_Dashboard.pbix", download: true }
+    ]
   },
   {
     id: "churn",
@@ -46,19 +55,137 @@ const projects = [
     theme: "retention",
     icon: "CRM",
     date: "Mar 2025",
-    summary: "Customer churn study on 7,043 records and 23 features to identify risk segments, retention drivers, and behavior patterns.",
+    summary: "Analyzed 7,043 telecom customer records across 23 variables to pinpoint churn-prone segments, quantify retention risk, and support intervention planning before revenue leaks grow.",
     highlights: [
-      "Identified month-to-month contracts and early-tenure users as higher churn risk segments.",
-      "Used dashboards to support retention strategy and business interpretation.",
-      "Balanced analytical depth with clear stakeholder communication."
+      "Identified month-to-month contracts, low-tenure subscribers, and service-level patterns as key churn signals for retention targeting.",
+      "Translated customer behavior into dashboard KPIs that help teams focus on at-risk cohorts instead of reactive blanket outreach.",
+      "Balanced statistical analysis with business storytelling so churn insights were easier to operationalize."
     ],
     tools: ["Power BI", "Python", "SQL", "DAX", "Customer Retention"],
+    imagePosition: "center top",
     image: "assets/projects/churn-1.png",
     slides: ["assets/projects/churn-1.png", "assets/projects/churn-2.png", "assets/projects/churn-3.png"],
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/Customer-Churn-Analysis" },
       { label: "Open EDA Report", url: "assets/docs/Churn_Analysis_EDA.pdf" },
-      { label: "Open Project Summary", url: "assets/docs/Teco_Customer_Churn_Analysis.pdf" }
+      { label: "Open Retention Summary", url: "assets/docs/Teco_Customer_Churn_Analysis.pdf" }
+    ]
+  },
+  {
+    id: "pizza",
+    title: "Pizza Sales SQL Deep Dive",
+    kicker: "SQL + Restaurant Analytics",
+    theme: "sql",
+    icon: "SQL",
+    date: "Featured",
+    summary: "Analyzed pizza sales with SQL to quantify revenue by category, size, and order pattern, helping restaurant teams sharpen menu strategy, pricing focus, and peak-hour planning.",
+    highlights: [
+      "Mapped revenue by pizza category, size, and order timing to show which menu combinations drove the highest commercial return.",
+      "Used SQL analysis to surface top sellers and peak demand windows, helping support pricing, inventory, and promotion choices.",
+      "Turned query output into presentation-ready visuals so non-technical stakeholders could review the story quickly."
+    ],
+    tools: ["SQL", "Menu Analytics", "Revenue Analysis", "Business Reporting"],
+    imagePosition: "center top",
+    image: "assets/projects/pizza-1.png",
+    slides: [
+      "assets/projects/pizza-1.png",
+      "assets/projects/pizza-2.png",
+      "assets/projects/pizza-3.png",
+      "assets/projects/pizza-4.png",
+      "assets/projects/pizza-5.png",
+      "assets/projects/pizza-6.png",
+      "assets/projects/pizza-7.png",
+      "assets/projects/pizza-8.png",
+      "assets/projects/pizza-9.png",
+      "assets/projects/pizza-10.png"
+    ],
+    actions: [
+      { label: "View GitHub", url: "https://github.com/Manish-2906/Pizza-Sales-Analysis-SQL" },
+      { label: "Open Problem Statement", url: "assets/docs/Project_Pizza_Sales_SQL.pdf" },
+      { label: "Open Presentation Deck", url: "assets/docs/Pizza_Restaurant_Presentation.pdf" }
+    ]
+  },
+  {
+    id: "fnp",
+    title: "Ferns & Petals Sales Intelligence",
+    kicker: "Excel Dashboard | Business KPIs",
+    theme: "excel",
+    icon: "XLS",
+    date: "Featured",
+    summary: "Built an Excel sales dashboard around revenue, delivery time, top products, and occasion-led demand so the business can improve campaign timing, inventory planning, and customer experience.",
+    highlights: [
+      "Tracked revenue, order count, average customer spend, and delivery time in one dashboard designed for faster business reviews.",
+      "Compared occasion-level demand, top products, and top cities to highlight when and where gifting sales perform best.",
+      "Created an Excel-based visual story that helps teams align campaigns with seasonal buying behavior."
+    ],
+    tools: ["Excel", "Sales Dashboard", "Occasion Analytics", "KPI Tracking"],
+    imagePosition: "center top",
+    image: "assets/projects/fnp-1.png",
+    slides: [
+      "assets/projects/fnp-1.png",
+      "assets/projects/fnp-2.png",
+      "assets/projects/fnp-3.png",
+      "assets/projects/fnp-4.png",
+      "assets/projects/fnp-5.png",
+      "assets/projects/fnp-6.png",
+      "assets/projects/fnp-7.png",
+      "assets/projects/fnp-8.png",
+      "assets/projects/fnp-9.png"
+    ],
+    actions: [
+      { label: "View GitHub", url: "https://github.com/Manish-2906/-Ferns-Petals-Sales-Analysis-Dashboard-Excel-Project" },
+      { label: "Open Problem Statement", url: "assets/docs/Ferns_and_Petals_Sales_Analysis.pdf" },
+      { label: "Open Presentation Deck", url: "assets/docs/FNP_Presentation.pdf" }
+    ]
+  },
+  {
+    id: "online-store",
+    title: "Online Store Sales Analysis",
+    kicker: "Excel Dashboard | Annual Report",
+    theme: "excel",
+    icon: "XLS",
+    date: "Featured",
+    summary: "Built an annual online store sales dashboard to compare channel mix, gender contribution, age-group demand, and state-level performance, helping teams identify where orders and revenue are actually coming from.",
+    highlights: [
+      "Combined channel mix, order status, monthly trend, gender split, and state performance into one Excel reporting layer for faster business reviews.",
+      "Highlighted where sales volume, order count, and customer mix differ across Amazon, Flipkart, Myntra, and other channels so teams can focus marketing where conversion is stronger.",
+      "Shows how an annual-report dataset can be translated into recruiter-ready business visuals with clear commercial talking points."
+    ],
+    tools: ["Excel", "Dashboarding", "Channel Analysis", "Sales KPIs"],
+    imagePosition: "center top",
+    image: "assets/projects/online-store-1.png",
+    slides: [
+      "assets/projects/online-store-1.png",
+      "assets/projects/online-store-2.png",
+      "assets/projects/online-store-3.png",
+      "assets/projects/online-store-4.png",
+      "assets/projects/online-store-5.png"
+    ],
+    actions: [
+      { label: "View GitHub", url: "https://github.com/Manish-2906/Online-Store-Sales-Analysis-Excel-Dashboard" },
+      { label: "Open Problem Statement", url: "assets/docs/Online_Store_Annual_Report_Problem_Statement.pdf" },
+      { label: "Open Dashboard Report", url: "assets/docs/Online_Store_Sales_Analysis_Dashboard.pdf" }
+    ]
+  },
+  {
+    id: "fifa",
+    title: "FIFA World Cup Tableau Report",
+    kicker: "Tableau | Visual Storytelling",
+    theme: "tableau",
+    icon: "VIZ",
+    date: "Featured",
+    summary: "Designed a Tableau story that connects champions, hosts, qualification history, audience patterns, and tournament-era trends so viewers can explore World Cup performance through one visual narrative.",
+    highlights: [
+      "Turned tournament history, host-country context, attendance signals, and qualification trends into a single Tableau storytelling flow.",
+      "Used visual summaries to make sports data easier to scan for non-technical viewers, showing narrative-led dashboard design.",
+      "Strengthens the portfolio with a polished data-visualization case study beyond pure business reporting."
+    ],
+    tools: ["Tableau", "Data Storytelling", "Sports Analytics", "Dashboard Design"],
+    imagePosition: "center top",
+    image: "assets/projects/fifa-1.png",
+    slides: ["assets/projects/fifa-1.png", "assets/projects/fifa-2.png"],
+    actions: [
+      { label: "View GitHub", url: "https://github.com/Manish-2906/FIFA-World-Cup-Analysis-Portfolio-Report" }
     ]
   },
   {
@@ -68,34 +195,21 @@ const projects = [
     theme: "python",
     icon: "PY",
     date: "Jun 2025",
-    summary: "Python-based chat analytics app that measures message volume, active users, emoji usage, and communication patterns from exported chats.",
+    summary: "Built a Streamlit chat analytics app that converts exported conversations into participation, response, and activity KPIs, turning unstructured messages into clear engagement insights.",
     highlights: [
-      "Explores who speaks most, when activity peaks, and how chat behavior changes over time.",
-      "Turns text-heavy conversation data into readable dashboards and summaries.",
-      "Strong example of practical Python-based analysis."
+      "Quantifies who contributes most, when activity peaks, and how engagement shifts over time without manual chat review.",
+      "Transforms noisy conversational data into digestible charts and summaries that support faster pattern discovery.",
+      "Demonstrates practical Python analytics on real-world text data with a usable front end."
     ],
     tools: ["Python", "Streamlit", "Text Analysis", "Visualization"],
+    imagePosition: "center top",
     image: "assets/projects/whatsapp-1.png",
     slides: ["assets/projects/whatsapp-1.png", "assets/projects/whatsapp-2.png", "assets/projects/whatsapp-3.png"],
-    actions: [{ label: "View GitHub", url: "https://github.com/Manish-2906/WhatsApp-Chat-Analysis" }]
-  },
-  {
-    id: "covid",
-    title: "COVID-19 Impact Analysis",
-    kicker: "Python Dashboard Project",
-    theme: "public",
-    icon: "DASH",
-    date: "Apr 2026",
-    summary: "Interactive India-focused dashboard summarizing pandemic metrics, trend movement, and resource-related insights in a compact reporting view.",
-    highlights: [
-      "Designed for quick understanding of time-based and geographic metrics.",
-      "Shows clarity in public-data dashboarding and summary design.",
-      "Useful example of analytical reporting on real-world topics."
-    ],
-    tools: ["Python", "Dashboarding", "Public Data", "Trend Analysis"],
-    image: "assets/projects/covid.png",
-    slides: ["assets/projects/covid.png"],
-    actions: [{ label: "View GitHub", url: "https://github.com/Manish-2906/COVID-19-Impact-Analysis-" }]
+    actions: [
+      { label: "View GitHub", url: "https://github.com/Manish-2906/WhatsApp-Chat-Analysis" },
+      { label: "Open Problem Statement", url: "assets/docs/WhatsApp_Chat_Analysis_Problem_Statement.pdf" },
+      { label: "Open Project Explanation", url: "assets/docs/WhatsApp_Chat_Analysis_Explanation.pdf" }
+    ]
   },
   {
     id: "movie",
@@ -104,13 +218,14 @@ const projects = [
     theme: "ml",
     icon: "ML",
     date: "Aug 2025",
-    summary: "Content-based recommendation engine using a similarity matrix and TMDB API to return relevant movie suggestions with rich poster output.",
+    summary: "Built a content-based recommendation engine that improves content discovery by surfacing relevant titles quickly, reducing search friction and demonstrating how analytics can lift user engagement.",
     highlights: [
-      "Uses cosine similarity for relevant recommendations.",
-      "Pulls rich poster data from the TMDB API.",
-      "Shows how machine learning can be packaged in a user-friendly way."
+      "Uses similarity modeling to match users with closer-fit titles instead of generic browsing.",
+      "Enriched results with TMDB poster metadata to make recommendations more clickable and user friendly.",
+      "Frames machine learning as a product-impact feature rather than only a model experiment."
     ],
     tools: ["Machine Learning", "Python", "TMDB API", "Recommendation Systems"],
+    imagePosition: "center center",
     image: "assets/projects/movie.png",
     slides: ["assets/projects/movie.png"],
     actions: [{ label: "View GitHub", url: "https://github.com/Manish-2906/Movie_recommendation" }]
@@ -122,18 +237,32 @@ const projects = [
     theme: "sql",
     icon: "SQL",
     date: "Jun 2025",
-    summary: "Advanced SQL case study exploring customers, invoices, artists, genres, and sales patterns to uncover revenue and purchase insights.",
+    summary: "Executed advanced SQL analysis across customers, invoices, artists, and genres to uncover revenue concentration, high-value buyers, and best-selling catalog segments for smarter merchandising decisions.",
     highlights: [
-      "Uses analytical SQL queries for customer, sales, and genre-level investigation.",
-      "Shows practical business questioning with relational data.",
-      "Also supported with a detailed local project document."
+      "Answered business questions around customer spend, genre performance, and artist-level sales using joins, CTEs, and aggregations.",
+      "Revealed where revenue clusters and which music categories deserve stronger promotion or stocking focus.",
+      "Supported the analysis with a full project document and presentation deck for portfolio storytelling."
     ],
     tools: ["SQL", "Relational Analysis", "Business Queries", "Sales Insights"],
+    imagePosition: "center top",
     image: "assets/projects/music-1.png",
-    slides: ["assets/projects/music-1.png", "assets/projects/music-2.png", "assets/projects/music-3.png", "assets/projects/music-4.png", "assets/projects/music-5.png"],
+    slides: [
+      "assets/projects/music-1.png",
+      "assets/projects/music-2.png",
+      "assets/projects/music-3.png",
+      "assets/projects/music-4.png",
+      "assets/projects/music-5.png",
+      "assets/projects/music-6.png",
+      "assets/projects/music-7.png",
+      "assets/projects/music-8.png",
+      "assets/projects/music-9.png",
+      "assets/projects/music-10.png",
+      "assets/projects/music-11.png",
+      "assets/projects/music-12.png"
+    ],
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/Music-Store-Data-Analysis-in-SQL" },
-      { label: "Open Project PDF", url: "assets/docs/Project_Music_Store_SQL.pdf" },
+      { label: "Open SQL Case Study", url: "assets/docs/Project_Music_Store_SQL.pdf" },
       { label: "Open Presentation Deck", url: "assets/docs/Music_Store_Analysis_Deck.pptx" }
     ]
   },
@@ -144,18 +273,30 @@ const projects = [
     theme: "automation",
     icon: "BOT",
     date: "Jun 2025",
-    summary: "Python automation workflow for collecting image results from the web and storing them in a reusable format for further analysis or model input.",
+    summary: "Automated image collection from the web with Python to cut repetitive manual search effort and create reusable datasets for downstream analysis, labeling, or model experimentation.",
     highlights: [
-      "Built to practice scraping workflows and automate repetitive collection tasks.",
-      "Shows useful handling of dynamic web content for data gathering.",
-      "Pairs well with analyst workflows that depend on external data acquisition."
+      "Reduced manual collection work by turning repeated browser tasks into a reusable scraping workflow.",
+      "Demonstrates how analysts can build faster data-acquisition pipelines when public data is not available in ready-made tables.",
+      "Useful support project for teams that need custom image datasets or automated research collection."
     ],
     tools: ["Python", "BeautifulSoup", "Web Scraping", "Automation"],
-    image: "assets/projects/google-scraping.png",
-    slides: ["assets/projects/google-scraping.png", "assets/projects/web-scraping.png"],
+    imagePosition: "center center",
+    image: "assets/projects/scraping-1.png",
+    slides: [
+      "assets/projects/scraping-1.png",
+      "assets/projects/scraping-2.png",
+      "assets/projects/scraping-3.png",
+      "assets/projects/scraping-4.png",
+      "assets/projects/scraping-5.png",
+      "assets/projects/scraping-6.png",
+      "assets/projects/scraping-7.png",
+      "assets/projects/scraping-8.png",
+      "assets/projects/scraping-9.png"
+    ],
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/-Google-Image-Scraping-using-Python" },
-      { label: "Open Summary PDF", url: "assets/docs/Google_Image_Scraping_Summary.pdf" },
+      { label: "Open Problem Statement", url: "assets/docs/Google_Image_Scraping_Problem_Statement.pdf" },
+      { label: "Open Workflow Summary", url: "assets/docs/Google_Image_Scraping_Summary.pdf" },
       { label: "Open Presentation Deck", url: "assets/docs/Google_Image_Scraping_Deck.pdf" }
     ]
   }
@@ -163,42 +304,46 @@ const projects = [
 
 const repoArchive = [
   {
-    title: "Pizza Sales Analysis SQL",
-    kicker: "SQL Business Analysis",
-    theme: "sql",
-    icon: "SQL",
-    summary: "SQL project focused on revenue distribution, order behavior, and top-performing pizza categories for restaurant decision-making.",
-    tags: ["SQL", "Restaurant Analytics", "Revenue"],
-    actions: [
-      { label: "Open GitHub", url: "https://github.com/Manish-2906/Pizza-Sales-Analysis-SQL" },
-      { label: "Project Report", url: "assets/docs/Project_Pizza_Sales_SQL.pdf" },
-      { label: "Presentation", url: "assets/docs/Pizza_Restaurant_Presentation.pdf" }
-    ]
-  },
-  {
     title: "Zomato Restaurant EDA",
     kicker: "EDA + Business Insights",
     theme: "eda",
     icon: "EDA",
-    summary: "Restaurant analytics study exploring online ordering behavior, customer preferences, and rating-based trends for actionable decisions.",
+    summary: "Explored restaurant demand, online-order behavior, and rating trends to highlight what drives customer preference and where operators can improve visibility, delivery focus, or market positioning.",
     tags: ["Python", "EDA", "Consumer Data"],
     actions: [
       { label: "Open GitHub", url: "https://github.com/Manish-2906/Zomato-Restaurant-Data-Analysis-eda-" },
       { label: "Project Report", url: "assets/docs/Project_Zomato_EDA.pdf" },
-      { label: "Assignment", url: "assets/docs/Zomato_Project_Assignment.pdf" }
+      { label: "Open Problem Statement", url: "assets/docs/Zomato_Project_Assignment.pdf" }
     ]
   },
   {
-    title: "Ferns & Petals Sales Analysis",
-    kicker: "Excel Dashboard Project",
-    theme: "excel",
-    icon: "XLS",
-    summary: "Sales dashboard work for a gifting company, highlighting customer behavior, product performance, and occasion-based demand trends.",
-    tags: ["Excel", "Dashboard", "Sales Trends"],
+    id: "covid-archive",
+    title: "COVID-19 Monitoring Dashboard",
+    kicker: "Python Dashboard Project",
+    theme: "eda",
+    icon: "DASH",
+    summary: "Designed an India-focused monitoring dashboard consolidating case, recovery, and regional trend KPIs so users can quickly scan public-health movement from one reporting layer.",
+    image: "assets/projects/covid.png",
+    imagePosition: "center top",
+    slides: ["assets/projects/covid.png"],
+    highlights: [
+      "Brought time-series and geography-based metrics into one compact view for faster trend monitoring.",
+      "Improved readability of public data by organizing high-noise metrics into a decision-friendly dashboard format.",
+      "Shows how analytics can support situational awareness on a real-world, high-volume topic."
+    ],
+    tools: ["Python", "Dashboarding", "Public Data", "Trend Analysis"],
+    tags: ["Python", "Dashboard", "Public Data"],
+    actions: [{ label: "Open GitHub", url: "https://github.com/Manish-2906/COVID-19-Impact-Analysis-" }]
+  },
+  {
+    title: "New Year Sales Analysis",
+    kicker: "Python EDA Project",
+    theme: "marketing",
+    icon: "EDA",
+    summary: "Analyzed festive-season transactions to identify the highest-value customer segment, strongest states, and best-selling categories, giving marketing teams clearer direction on campaign targeting and stock planning.",
+    tags: ["Python", "EDA", "Retail Analytics"],
     actions: [
-      { label: "Open GitHub", url: "https://github.com/Manish-2906/-Ferns-Petals-Sales-Analysis-Dashboard-Excel-Project" },
-      { label: "Project PDF", url: "assets/docs/Ferns_and_Petals_Sales_Analysis.pdf" },
-      { label: "Presentation", url: "assets/docs/FNP_Presentation.pdf" }
+      { label: "Open Analysis PDF", url: "assets/docs/New_Year_Sales_Analysis.pdf" }
     ]
   },
   {
@@ -206,21 +351,10 @@ const repoArchive = [
     kicker: "Customer Analytics",
     theme: "marketing",
     icon: "MKT",
-    summary: "Customer and campaign analysis project covering spending patterns, market segmentation, and data-driven marketing insights.",
+    summary: "Segmented customers by spend and campaign behavior to help prioritize high-value audiences, sharpen targeting decisions, and improve marketing ROI conversations.",
     tags: ["Python", "Marketing", "Segmentation"],
     actions: [
       { label: "Open GitHub", url: "https://github.com/Manish-2906/Marketing_Data_Analysis" }
-    ]
-  },
-  {
-    title: "FIFA World Cup Tableau Report",
-    kicker: "Visualization Storytelling",
-    theme: "tableau",
-    icon: "VIZ",
-    summary: "Interactive sports analysis work showcasing competition trends, team performance, and audience-facing dashboard storytelling.",
-    tags: ["Tableau", "Sports Analytics", "Dashboard"],
-    actions: [
-      { label: "Open GitHub", url: "https://github.com/Manish-2906/FIFA-World-Cup-Analysis-Portfolio-Report" }
     ]
   },
   {
@@ -228,7 +362,7 @@ const repoArchive = [
     kicker: "Data Cleaning Project",
     theme: "cleaning",
     icon: "ETL",
-    summary: "Large-scale product review cleaning workflow using Python, regex, and string operations to improve dataset quality before analysis.",
+    summary: "Cleaned large-scale product review data with Python and regex to reduce noise, standardize messy text fields, and create analysis-ready inputs for pricing, sentiment, or merchandising work.",
     tags: ["Python", "Data Cleaning", "Preprocessing"],
     actions: [
       { label: "Open GitHub", url: "https://github.com/Manish-2906/Flipkart-Product-Data-Cleaning" }
@@ -252,6 +386,7 @@ const credentials = [
     tools: ["Internship Proof", "Analytics Delivery", "Reporting"],
     actions: [
       { label: "Open Experience Letter", url: "assets/credentials/experience-letter.png" },
+      { label: "Open Signed PDF", url: "assets/docs/Experience_Letter_Manish.pdf" },
       { label: "Open Welcome Letter", url: "assets/docs/Internship_Welcome_Letter.pdf" }
     ]
   },
@@ -341,6 +476,8 @@ const credentials = [
   }
 ];
 
+document.documentElement.classList.add("js-ready");
+
 const qs = (s) => document.querySelector(s);
 const qsa = (s) => Array.from(document.querySelectorAll(s));
 const projectGrid = qs("#projectGrid");
@@ -360,17 +497,37 @@ const modalActions = qs("#modalActions");
 const modalDots = qs("#modalDots");
 const prevSlideButton = qs("#prevSlide");
 const nextSlideButton = qs("#nextSlide");
+const modalContent = qs("#modalContent");
+const modalCloseButton = qs(".modal-close");
+const heroVideoFrame = qs("#heroVideoFrame");
+const heroVideoFallback = qs("#heroVideoFallback");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let activeItem = null;
 let activeSlide = 0;
+let lastActiveTrigger = null;
 
 const tags = (list) => list.map((tag) => `<span>${tag}</span>`).join("");
-const itemById = (id) => [...projects, ...credentials].find((item) => item.id === id) || null;
+const itemById = (id) => [...projects, ...credentials, ...repoArchive].find((item) => item.id === id) || null;
+
+function setNavState(open) {
+  navLinks.classList.toggle("is-open", open);
+  navToggle.setAttribute("aria-expanded", String(open));
+}
+
+function revealAnimatedNodes() {
+  qsa("[data-animate]").forEach((node) => node.classList.add("is-visible"));
+}
+
+function getModalFocusableElements() {
+  return qsa("#detailModal button, #detailModal a[href], #detailModal [tabindex]:not([tabindex='-1'])")
+    .filter((node) => !node.disabled && node.offsetParent !== null);
+}
 
 function renderCards() {
   projectGrid.innerHTML = projects.map((project) => `
     <article class="project-card project-theme-${project.theme}" data-animate>
       <div class="project-visual">
-        <img src="${project.image}" alt="${project.title} preview" loading="lazy">
+        <img src="${project.image}" alt="${project.title} preview" loading="lazy" style="object-position: ${project.imagePosition || "center center"};">
         <span class="project-icon" aria-hidden="true">${project.icon}</span>
       </div>
       <div class="project-body">
@@ -380,7 +537,10 @@ function renderCards() {
         <ul class="project-highlights">${project.highlights.slice(0, 2).map((item) => `<li>${item}</li>`).join("")}</ul>
         <div class="tag-row">${tags(project.tools)}</div>
         <div class="project-actions">
-          <a class="action-link" href="${project.actions[0].url}" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+          ${project.actions.slice(0, 3).map((action) => {
+            const external = action.url.startsWith("http");
+            return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
+          }).join("")}
           <button class="action-button" type="button" data-open-detail="${project.id}">Open Details</button>
         </div>
       </div>
@@ -403,6 +563,7 @@ function renderCards() {
 
   repoArchiveGrid.innerHTML = repoArchive.map((item) => `
     <article class="repo-card repo-theme-${item.theme}" data-animate>
+      ${item.image ? `<div class="repo-visual"><img src="${item.image}" alt="${item.title} preview" loading="lazy" style="object-position: ${item.imagePosition || "center center"};"></div>` : ""}
       <div class="repo-card-head">
         <span class="repo-icon" aria-hidden="true">${item.icon}</span>
         <div class="repo-head-copy">
@@ -418,8 +579,9 @@ function renderCards() {
       <div class="repo-card-actions">
         ${item.actions.map((action) => {
           const external = action.url.startsWith("http");
-          return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>${action.label}</a>`;
+          return `<a class="action-link" href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
         }).join("")}
+        ${item.id ? `<button class="action-button" type="button" data-open-detail="${item.id}">View Gallery</button>` : ""}
       </div>
     </article>
   `).join("");
@@ -429,14 +591,15 @@ function renderModal() {
   if (!activeItem) return;
   modalImage.src = activeItem.slides[activeSlide];
   modalImage.alt = `${activeItem.title} slide ${activeSlide + 1}`;
+  modalImage.style.objectPosition = activeItem.modalPosition || activeItem.imagePosition || "center center";
   modalKicker.textContent = activeItem.kicker;
   modalTitle.textContent = activeItem.title;
   modalDescription.textContent = activeItem.summary;
-  modalHighlights.innerHTML = activeItem.highlights.map((item) => `<li>${item}</li>`).join("");
-  modalTags.innerHTML = tags(activeItem.tools);
+  modalHighlights.innerHTML = (activeItem.highlights || []).map((item) => `<li>${item}</li>`).join("");
+  modalTags.innerHTML = tags(activeItem.tools || activeItem.tags || []);
   modalActions.innerHTML = activeItem.actions.map((action, index) => {
     const external = action.url.startsWith("http");
-    return `<a href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}>${action.label}</a>`;
+    return `<a href="${action.url}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""}${action.download ? " download" : ""}>${action.label}</a>`;
   }).join("");
   modalDots.innerHTML = activeItem.slides.map((_, index) => `<button class="${index === activeSlide ? "is-active" : ""}" type="button" aria-label="Open slide ${index + 1}" data-open-slide="${index}"></button>`).join("");
   const visible = activeItem.slides.length > 1 ? "visible" : "hidden";
@@ -444,14 +607,17 @@ function renderModal() {
   nextSlideButton.style.visibility = visible;
 }
 
-function openModal(id) {
+function openModal(id, trigger = document.activeElement) {
   activeItem = itemById(id);
   activeSlide = 0;
   if (!activeItem) return;
+  lastActiveTrigger = trigger instanceof HTMLElement ? trigger : null;
   renderModal();
+  if (modalContent) modalContent.scrollTop = 0;
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
+  requestAnimationFrame(() => modalCloseButton?.focus());
 }
 
 function closeModal() {
@@ -459,6 +625,8 @@ function closeModal() {
   modal.setAttribute("aria-hidden", "true");
   document.body.style.overflow = "";
   activeItem = null;
+  lastActiveTrigger?.focus();
+  lastActiveTrigger = null;
 }
 
 function moveSlide(direction) {
@@ -468,6 +636,11 @@ function moveSlide(direction) {
 }
 
 function initReveal() {
+  if (prefersReducedMotion.matches || typeof IntersectionObserver === "undefined") {
+    revealAnimatedNodes();
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -509,6 +682,11 @@ function initCounters() {
     requestAnimationFrame(tick);
   };
 
+  if (prefersReducedMotion.matches || typeof IntersectionObserver === "undefined") {
+    counters.forEach((node) => formatValue(node, Number(node.dataset.counter || "0")));
+    return;
+  }
+
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -542,10 +720,27 @@ function initScrollSpy() {
   document.addEventListener("scroll", update, { passive: true });
 }
 
+function initHeroVideo() {
+  if (!heroVideoFrame) return;
+
+  const livePreviewLink = heroVideoFallback ? heroVideoFallback.querySelector("[data-live-preview]") : null;
+  if (livePreviewLink) livePreviewLink.href = `http://127.0.0.1:8000/index.html${window.location.hash || ""}`;
+
+  if (window.location.protocol === "file:") {
+    document.body.classList.add("is-file-preview");
+    return;
+  }
+
+  const originParam = window.location.origin && window.location.origin.startsWith("http")
+    ? `&origin=${encodeURIComponent(window.location.origin)}`
+    : "";
+  heroVideoFrame.src = `${heroVideoFrame.dataset.src}${originParam}`;
+}
+
 function initEvents() {
   document.addEventListener("click", (event) => {
     const detailButton = event.target.closest("[data-open-detail]");
-    if (detailButton) openModal(detailButton.getAttribute("data-open-detail"));
+    if (detailButton) openModal(detailButton.getAttribute("data-open-detail"), detailButton);
 
     const slideButton = event.target.closest("[data-open-slide]");
     if (slideButton && activeItem) {
@@ -554,27 +749,57 @@ function initEvents() {
     }
 
     if (event.target.closest("[data-modal-close]")) closeModal();
+
+    if (navLinks.classList.contains("is-open") && !event.target.closest(".nav")) {
+      setNavState(false);
+    }
   });
 
   prevSlideButton.addEventListener("click", () => moveSlide(-1));
   nextSlideButton.addEventListener("click", () => moveSlide(1));
 
   document.addEventListener("keydown", (event) => {
-    if (!modal.classList.contains("is-open")) return;
-    if (event.key === "Escape") closeModal();
-    if (event.key === "ArrowRight") moveSlide(1);
-    if (event.key === "ArrowLeft") moveSlide(-1);
+    if (modal.classList.contains("is-open")) {
+      if (event.key === "Escape") closeModal();
+      if (event.key === "ArrowRight") moveSlide(1);
+      if (event.key === "ArrowLeft") moveSlide(-1);
+
+      if (event.key === "Tab") {
+        const focusable = getModalFocusableElements();
+        if (!focusable.length) return;
+
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+
+      return;
+    }
+
+    if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
+      setNavState(false);
+      navToggle.focus();
+    }
   });
 
   navToggle.addEventListener("click", () => {
-    const open = navLinks.classList.toggle("is-open");
-    navToggle.setAttribute("aria-expanded", String(open));
+    setNavState(!navLinks.classList.contains("is-open"));
   });
 
   navItems.forEach((link) => link.addEventListener("click", () => {
-    navLinks.classList.remove("is-open");
-    navToggle.setAttribute("aria-expanded", "false");
+    setNavState(false);
   }));
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 820 && navLinks.classList.contains("is-open")) setNavState(false);
+  });
 }
 
 renderCards();
@@ -582,3 +807,4 @@ initEvents();
 initReveal();
 initCounters();
 initScrollSpy();
+initHeroVideo();
