@@ -219,8 +219,7 @@ const projects = [
     slides: ["assets/projects/whatsapp-1.png", "assets/projects/whatsapp-2.png", "assets/projects/whatsapp-3.png"],
     actions: [
       { label: "View GitHub", url: "https://github.com/Manish-2906/WhatsApp-Chat-Analysis" },
-      { label: "Open Problem Statement", url: "assets/docs/WhatsApp_Chat_Analysis_Problem_Statement.pdf" },
-      { label: "Open Project Explanation", url: "assets/docs/WhatsApp_Chat_Analysis_Explanation.pdf" }
+      { label: "Open Problem Statement", url: "assets/docs/WhatsApp_Chat_Analysis_Problem_Statement.pdf" }
     ]
   },
   {
@@ -542,7 +541,9 @@ function resolveAction(action) {
 }
 
 function getVisibleActions(actions = []) {
-  return actions.map((action) => resolveAction(action));
+  return actions
+    .map((action) => resolveAction(action))
+    .filter((action) => !/project explanation/i.test(action.label || ""));
 }
 
 function setNavState(open) {
