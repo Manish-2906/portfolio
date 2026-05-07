@@ -1,5 +1,29 @@
 const projects = [
   {
+    id: "vendor-analysis",
+    title: "Vendor Performance & Profitability Analysis",
+    kicker: "Retail Inventory & Sales | SQL, Python, Power BI",
+    theme: "analytics",
+    icon: "BI",
+    date: "May 2026",
+    summary: "Analyzed vendor efficiency and profitability across purchasing, sales, pricing, freight, and inventory data to support strategic purchasing decisions, reduce over-dependence, and uncover inventory optimization opportunities.",
+    highlights: [
+      "Developed a complex SQL ETL pipeline with CTEs and filtered aggregations to build a vendor_sales_summary table from multiple business tables.",
+      "Used Python EDA and hypothesis testing to evaluate vendor profitability, pricing strategy effectiveness, inventory turnover, and margin behavior.",
+      "Identified over-dependence on the top 10 vendors, representing 65.7% of purchases, and uncovered $2.71M in unsold inventory from low-performing vendors.",
+      "Built Power BI dashboards showing vendor performance, profit margins, bulk purchase impact, and a 72% cost-reduction signal for decision-makers."
+    ],
+    tools: ["SQL", "Python", "Power BI", "MySQL", "Hypothesis Testing"],
+    imagePosition: "center center",
+    image: "assets/projects/vendor-analysis-1.png",
+    slides: ["assets/projects/vendor-analysis-1.png", "assets/projects/vendor-analysis-impact.png"],
+    actions: [
+      { label: "Download EDA Notebook", url: "assets/docs/Vendor_Performance_Analysis.ipynb", download: true },
+      { label: "Open Business Problem", url: "assets/docs/Vendor_Performance_Business_Problem.pdf" },
+      { label: "Open Presentation Deck", url: "assets/docs/Vendor_Performance_Presentation.pdf" }
+    ]
+  },
+  {
     id: "ecommerce",
     title: "E-commerce Sales Dashboard",
     kicker: "Internship Project | Power BI",
@@ -695,9 +719,12 @@ function initCounters() {
 
   const formatValue = (node, value) => {
     const suffix = node.dataset.suffix || "";
+    const prefix = node.dataset.prefix || "";
     const useComma = node.dataset.format === "comma";
-    const text = useComma ? Math.round(value).toLocaleString("en-IN") : Math.round(value).toString();
-    node.textContent = `${text}${suffix}`;
+    const decimals = Number(node.dataset.decimals || "0");
+    const rounded = decimals > 0 ? value.toFixed(decimals) : Math.round(value).toString();
+    const text = useComma ? Math.round(value).toLocaleString("en-IN") : rounded;
+    node.textContent = `${prefix}${text}${suffix}`;
   };
 
   const animateCounter = (node) => {
