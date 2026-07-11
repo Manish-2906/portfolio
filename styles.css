@@ -290,7 +290,7 @@ body.is-file-preview .hero-video-fallback {
 .signal-card {
   display: grid;
   align-content: start;
-  gap: 14px;
+  gap: 10px;
   min-height: 150px;
   height: 150px;
   padding: 22px 24px;
@@ -298,10 +298,17 @@ body.is-file-preview .hero-video-fallback {
   background: rgba(255, 251, 245, 0.9);
   box-shadow: var(--shadow);
 }
+.signal-card small {
+  color: #0a716c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
 .signal-card strong,.spotlight-number { display: block; margin-bottom: 0; font-family: "Sora", sans-serif; }
 .signal-card strong {
   font-size: clamp(2.2rem, 3.2vw, 2.9rem);
-  letter-spacing: -0.06em;
+  letter-spacing: 0;
   line-height: 0.92;
 }
 .signal-card span,.spotlight-text {
